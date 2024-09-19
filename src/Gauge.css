@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.needle {
+  width: 2px;
+  height: 9rem;
+  background-color: #111;
+  position: absolute;
+  bottom: 0;
+
+  transform-origin: 50% 100%;
+  transform: rotate(90deg);
+  box-shadow: 3px 3px 2px #333;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tick {
+  font-size: 1rem;
+  color: black;
+
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  pointer-events: none;
+  user-select: none;
+}
+.line {
+  height: 9%;
+
+  margin-bottom: 0%;
+  background-color: #111;
+  width: 1px;
+}
+/* .gauge.circular{
+  height: 100%;
+  border-radius: 50%;
+
+} */
+
+.gauge {
+  position: relative;
+
+  width: 100%;
+  height: 50%;
+
+  border-radius: 300px 300px 0 0;
+
+  border: 3px solid black;
+  transition: all 0.5s;
+
+  z-index: 2;
+}
+.fine-tuner {
+  display: flex;
+  justify-content: space-evenly;
+}
+.drag-layer {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 3;
+}
+.drag-layer:hover {
+  z-index: 1;
+}
+.drag-layer:hover > .gauge {
+  box-shadow: 5px 5px 3px #333;
+}
+
+.value {
+  font-size: 2em;
+  color: black;
+
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 700;
+}
+
+.v {
+}
+.mark {
+  height: 30px;
+  background-color: black;
+  width: 5px;
+}
+
+.circle {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  background-color: black;
+  border-radius: 100px 100px 0 0;
+  bottom: 0px;
+  box-shadow: 1px 1px 2px #333;
+}
+/* .gauge.circular .circle{
+  
+  height: 100px;
+  bottom: calc(50% - 50px);
+  border-radius: 50%;
+
+} */
+.tickmark {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+}
+/* .gauge.circlar .tickmark{
+  height: 150px;
+  bottom: 50%;
+  
+} */
+
+.gauge.half-circle .tickmark {
+  height: 100%;
+
+  margin-bottom: 0%;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+
+  transform-origin: 50% 100%;
+  text-align: center;
+}
+
+.gauge-title {
+  font-size: 2em;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  pointer-events: none;
+  user-select: none;
+
+  color: white;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 0px 16px;
+  border-radius: 2px;
+  min-width: 80px;
+  height: 32px;
+  background-color: rgb(0, 120, 212);
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 120, 212);
+  :hover {
+    background-color: rgb(16, 110, 190);
+    border: 1px solid rgb(16, 110, 190);
+  }
+}
+
+.lock {
+  width: 20px;
+}
